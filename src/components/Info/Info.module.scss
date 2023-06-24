@@ -1,0 +1,62 @@
+$color: #00ba19;
+$white: #fff;
+.wrapper {
+    padding: 30px;line-height: 1.5;
+    .top {
+        margin-bottom: 20px;color: $color;display: flex;
+        .left {
+            margin-right: 50px;
+        }
+        b {
+            display: inline-block;min-width: 100px;
+        }
+    }
+    .line, .info  {
+        color: #c97200;margin-bottom: 20px;
+        b {
+            color: #ccc;
+        }
+    }
+    .selector {
+        label {
+            color: $color;
+            b {
+                color: $white;
+            }
+        }
+        input {
+            display: inline-block;margin-left: 10px;background: transparent;color: #366e9c;
+            border: none;outline: none;font-weight: bold;position: relative;
+            caret-color: transparent;opacity: 0;
+        }
+    }
+}
+pre {
+    align-items: center;
+    code {
+        color: $color;display: block;margin-bottom: 50px;
+    }
+}
+.profileDetails {
+    display: flex;
+    .boxes {
+        margin-right: 30px;
+    }
+}
+span.command {
+    color: #366e9c;font-weight:bold;
+    >i {
+        display: inline-block;background: $white;width: 6px;height: 14px;opacity: .8;
+        position: relative;top: 2px;
+        animation: blink 1s infinite;
+    }
+}
+
+@keyframes blink {
+    0%{
+        opacity: .7;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,27 @@
+$color: #00ba19;
+$white: #fff;
+$main: #c97200;
+$error: #dd4141;
+
+.box {
+    display: grid;grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.line {
+    color: #b18244;margin-bottom: 20px;
+    b {
+        display: inline-block;min-width: 170px;
+    }
+}
+.info {
+    color: #b18244;
+    div {
+        margin-bottom: 10px;
+    }
+    b {
+        display: inline-block; min-width: 220px;
+    }
+}
+
+.alert {
+    color: $error;margin-bottom: 20px;
+}

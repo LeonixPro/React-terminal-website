@@ -1,0 +1,61 @@
+$color: #00ba19;
+$white: #fff;
+$main: #c97200;
+$error: #ff0000;
+.box {
+    display: flex;
+}
+.line {
+    color: #b18244;margin-bottom: 20px;margin-right: 40px;
+    b {
+        display: inline-block;min-width: 220px;margin-bottom: 5px;
+    }
+}
+.projects {
+    width: 50%;
+    table {
+        border: 1px dashed $color;color: $color;
+        th, td {
+            border: 1px dashed $color;font-size: .8rem;
+        }
+    }
+}
+
+.tasks, .description {
+    color: $color;margin-bottom: 20px;
+    div {
+        margin-bottom: 10px;
+    }
+}
+
+.selector {
+    label {
+        color: $color;
+        b {
+            color: $white;
+        }
+    }
+    input {
+        display: inline-block;margin-left: 10px;background: transparent;color: #366e9c;
+        border: none;outline: none;font-weight: bold;position: relative;
+        caret-color: transparent;opacity: 0;
+    }
+}
+
+span.command {
+    color: #366e9c;font-weight:bold;margin-top: 20px;
+    >i {
+        display: inline-block;background: $white;width: 6px;height: 14px;opacity: .8;
+        position: relative;top: 2px;
+        animation: blink 1s infinite;
+    }
+}
+
+@keyframes blink {
+    0%{
+        opacity: .7;
+    }
+    100% {
+        opacity: 0;
+    }
+}

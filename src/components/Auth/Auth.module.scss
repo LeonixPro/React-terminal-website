@@ -1,0 +1,38 @@
+$color: #00ba19;
+$white: #fff;
+$main: #c97200;
+$error: #ff0000;
+
+.selector {
+    label {
+        color: $color;
+        b {
+            color: $white;
+        }
+    }
+    input {
+        display: inline-block;margin-left: 10px;background: transparent;color: #366e9c;
+        border: none;outline: none;font-weight: bold;position: relative;
+        caret-color: transparent;opacity: 0;
+    }
+}
+.info {
+    color: $main;
+}
+span.command {
+    color: #366e9c;font-weight:bold;margin-top: 20px;
+    >i {
+        display: inline-block;background: $white;width: 6px;height: 14px;opacity: .8;
+        position: relative;top: 2px;
+        animation: blink 1s infinite;
+    }
+}
+
+@keyframes blink {
+    0%{
+        opacity: .7;
+    }
+    100% {
+        opacity: 0;
+    }
+}
