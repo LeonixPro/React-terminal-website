@@ -1,29 +1,29 @@
 import Command from "../Command/Command";
 import styles from "./Init.module.scss";
-const Init = ({ command, processCommand }) => {
+const Init = ({ command, processCommand, authData }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.box}>
         <div className={styles.line}>
           <div>
-            <b>{`[>]`} User name:</b> Leonix Pro
+            <b>{`[>]`} User name:</b> {authData.name} {authData.last_name}
           </div>
           <div>
-            <b>{`[>]`} Access level:</b> 10
+            <b>{`[>]`} Access level:</b> {authData.access}
           </div>
           <div>
-            <b>{`[>]`} User group:</b> Owner
+            <b>{`[>]`} User group:</b> Demo
           </div>
         </div>
         <div className={styles.line}>
           <div>
-            <b>{`[>]`} Location:</b> Sofia, Bulgaria
+            <b>{`[>]`} Reg. Location:</b> {authData.city}, {authData.country}
           </div>
           <div>
-            <b>{`[>]`} Date:</b> 25.04.2023
+            <b>{`[>]`} Date:</b> {authData.reg_date.split(" ", 1)}
           </div>
           <div>
-            <b>{`[>]`} Time:</b> 22:51
+            <b>{`[>]`} Time:</b> {authData.reg_date.slice(11, 19)}
           </div>
         </div>
         <div className={styles.line}>
@@ -31,51 +31,18 @@ const Init = ({ command, processCommand }) => {
             <b>{`[>]`} Authentication:</b> Granted
           </div>
           <div>
-            <b>{`[>]`} Projects:</b> 5
+            <b>{`[>]`} Projects:</b> {authData.projects}
           </div>
           <div>
-            <b>{`[>]`} Rewrite:</b> Disabled
-          </div>
-        </div>
-        <div className={styles.line}>
-          <div>
-            <b>{`[>]`} Engine:</b> V 1.0
-          </div>
-          <div>
-            <b>{`[>]`} Protection:</b> LPS / Enabled
-          </div>
-          <div>
-            <b>{`[>]`} Remote Control:</b> Enabled
+            <b>{`[>]`} Tasks:</b> {authData.tasks}
           </div>
         </div>
         <div className={styles.line}>
           <div>
-            <b>{`[>]`} Engine:</b> V 1.0
+            <b>{`[>]`} Status:</b> {authData.status}
           </div>
           <div>
-            <b>{`[>]`} Protection:</b> LPS / Enabled
-          </div>
-          <div>
-            <b>{`[>]`} Remote Control:</b> Enabled
-          </div>
-        </div>
-        <div className={styles.line}>
-          <div>
-            <b>{`[>]`} Engine:</b> V 1.0
-          </div>
-          <div>
-            <b>{`[>]`} Protection:</b> LPS / Enabled
-          </div>
-          <div>
-            <b>{`[>]`} Remote Control:</b> Enabled
-          </div>
-        </div>
-        <div className={styles.line}>
-          <div>
-            <b>{`[>]`} Engine:</b> V 1.0
-          </div>
-          <div>
-            <b>{`[>]`} Protection:</b> LPS / Enabled
+            <b>{`[>]`} Remote access:</b> Approved
           </div>
           <div>
             <b>{`[>]`} Remote Control:</b> Enabled

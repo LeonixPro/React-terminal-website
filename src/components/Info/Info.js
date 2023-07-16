@@ -178,7 +178,7 @@ const Info = () => {
       {help && (
         <Help command={command} processCommand={processCommand} error={error} />
       )}
-      {init && <Init command={command} processCommand={processCommand} />}
+      {init && <Init command={command} processCommand={processCommand} authData={authData} />}
       {projects && <List command={command} processCommand={processCommand} />}
       {project && (
         <Project

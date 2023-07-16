@@ -22,8 +22,7 @@ function App() {
         </ContextProvider>
       )}
       <div className="footer">
-        <div>Leonix Pro Protection System</div>
-        <div>Copyright @ Levon Aramyan</div>
+        <div>@ Levon Aramyan</div>
       </div>
     </div>
   );

@@ -51,6 +51,14 @@ span.command {
     }
 }
 
+.help {
+    color: $main;margin-bottom: 20px;
+}
+
+.no_project {
+    color: $error;margin-bottom: 20px;
+}
+
 @keyframes blink {
     0%{
         opacity: .7;

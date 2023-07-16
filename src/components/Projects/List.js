@@ -3,9 +3,7 @@ import styles from "./Project.module.scss";
 import { showProjects } from "../services/projects";
 import { MainContext } from "../context/context";
 export const List = () => {
-  const [main, setMain] = useState(true);
   const [projects, setProjects] = useState([]);
-  const [projectId, setProjectId] = useState(null);
   const [input, setInput] = useState(null);
 
   const { handleProject } = useContext(MainContext);
@@ -13,8 +11,6 @@ export const List = () => {
   useEffect(() => {
     showProjects().then((data) => {
       setProjects(data);
-      const total = data.length;
-      const completed = data.filter((x) => x.status === "Completed");
     });
   }, []);
 
@@ -41,7 +37,7 @@ export const List = () => {
         </div>
         <div className={styles.line}>
           <div>
-            <b>{`[>]`} Required Access Level:</b> 10
+            <b>{`[>]`} Required Access Level:</b> 3
           </div>
           <div>
             <b>{`[>]`} Remote Control:</b> Enabled
@@ -58,8 +54,14 @@ export const List = () => {
             <b>{`[>]`} Edit Project:</b> Disabled
           </div>
           <div>
-            <b>{`[>]`} Delete Project:</b> Enabled
+            <b>{`[>]`} Delete Project:</b> Disabled
           </div>
+        </div>
+      </div>
+      <div>
+      <div className={styles.help}>
+          <b>{`[$]`} Action command: </b>
+          {`[open project -id]`}
         </div>
       </div>
       <div className={styles.projects}>
